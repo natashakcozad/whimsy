@@ -1,0 +1,35 @@
+/*--------------------------------------------------------------
+0.1 Color Reference
+--------------------------------------------------------------
+	Links: #45c990
+	Text: #0a4651
+	Headers: #0a4651
+	Borders: #4c5454
+	Shadow: #66d6d6
+	Highlight: #b55cb2 or 180,92,178
+	Alt Highlight: #e2f1c0 or 226,241,192
+=================================================================*/
+/*--------------------------------------------------------------
+1.0 Waterlily Globals
+--------------------------------------------------------------*/
+body {
+	background-image: url(img/bg-3.png);
+}
+/* Custom Defaults */
+a, a:visited { color: #45c990 }
+a:hover, a:focus, a:active { color: #b55cb2 }
+.main-navigation ul ul { background: rgba(226,241,192,0.6); }
+::selection { background: #b55cb2 }
+::-moz-selection { background: #b55cb2 }
+/*--------------------------------------------------------------
+6.0 Widgets
+--------------------------------------------------------------*/
+.widget > h3, h1.widget-title {
+	background: url(img/bg-widget-3.png) 100% center no-repeat;
+}
+/*--------------------------------------------------------------
+9.0 Footer
+--------------------------------------------------------------*/
+#colophon, #infinite-footer .container {
+	background: url(img/bg-footer-3.png) 100% center no-repeat;
+}
