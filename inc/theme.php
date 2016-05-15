@@ -89,7 +89,7 @@ function whimsy_enqueue_scripts() {
     wp_enqueue_script( 'jquery-effects-core', array( 'jquery' ) );
     
 	/* Load responsive nav script. */
-    wp_enqueue_script( 'whimsy-menu-script', trailingslashit( THEME_URI ) . "js/menu{$suffix}.js", array( 'jquery' ), true );
+    wp_enqueue_script( 'whimsy-menu-script', trailingslashit( HYBRID_PARENT_URI ) . "js/menu{$suffix}.js", array( 'jquery' ), true );
     
 }
 
@@ -122,10 +122,10 @@ function whimsy_enqueue_styles() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
     
 	/* Load Font Awesome stylesheet. */
-    wp_enqueue_style( 'whimsy-font-awesome', trailingslashit( THEME_URI ) . "css/font-awesome{$suffix}.css" );
+    wp_enqueue_style( 'whimsy-font-awesome', trailingslashit( HYBRID_PARENT_URI ) . "css/font-awesome{$suffix}.css" );
     
 	/* Load responsive grid stylesheet. */
-    wp_enqueue_style( 'whimsy-grid', trailingslashit( THEME_URI ) . "css/grid{$suffix}.css" );
+    wp_enqueue_style( 'whimsy-grid', trailingslashit( HYBRID_PARENT_URI ) . "css/grid{$suffix}.css" );
 	
     /* Load masonry.js but only on the Mosaic page template. */
 	if ( is_page_template( 'pages/template-mosaic.php' ) ) {
@@ -142,17 +142,17 @@ function whimsy_enqueue_styles() {
  */
 function whimsy_load_extensions() {
 
-    require_if_theme_supports( 'whimsy-widgets', trailingslashit( THEME_DIR ) . 'inc/widgets.php' );
+    require_if_theme_supports( 'whimsy-widgets', trailingslashit( HYBRID_PARENT ) . 'inc/widgets.php' );
     
-    require_if_theme_supports( 'whimsy-plugins', trailingslashit( THEME_DIR ) . 'inc/plugins.php' );
+    require_if_theme_supports( 'whimsy-plugins', trailingslashit( HYBRID_PARENT ) . 'inc/plugins.php' );
     
-    require_if_theme_supports( 'whimsy-skins', trailingslashit( THEME_DIR ) . 'inc/customizer/skins.php' );
+    require_if_theme_supports( 'whimsy-skins', trailingslashit( HYBRID_PARENT ) . 'inc/customizer/skins.php' );
     
-    require_if_theme_supports( 'whimsy-customizer', trailingslashit( THEME_DIR ) . 'inc/customizer/customizer.php' );
+    require_if_theme_supports( 'whimsy-customizer', trailingslashit( HYBRID_PARENT ) . 'inc/customizer/customizer.php' );
     
-    require_if_theme_supports( 'whimsy-bg', trailingslashit( THEME_DIR ) . 'inc/customizer/bg.php' );
+    require_if_theme_supports( 'whimsy-bg', trailingslashit( HYBRID_PARENT ) . 'inc/customizer/bg.php' );
     
-    require_if_theme_supports( 'whimsy-box', trailingslashit( THEME_DIR ) . 'inc/customizer/box-layout.php' );
+    require_if_theme_supports( 'whimsy-box', trailingslashit( HYBRID_PARENT ) . 'inc/customizer/box-layout.php' );
 
 }
 

@@ -461,10 +461,6 @@ a:active {
 
 /* Menu: Primary */
 
-#menu-primary.nav {
-	position:relative;
-	display:block;
-}
 #menu-primary ul {
     background-color: rgba(240, 240, 240, 0.75);
     -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
@@ -472,7 +468,6 @@ a:active {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
     position: relative;
     list-style: none;
-    z-index: 1000;
     margin: 0;
     font-size: 16px;
 }
@@ -492,6 +487,8 @@ a:active {
 }
 #menu-primary ul li ul li { 
     background: rgba(200,200,200,0.9); 
+}
+#menu-primary ul li ul li a { 
     color: #fff;
     text-shadow: 0 1px 0 rgba(200,200,200,0.6);
 }
@@ -520,6 +517,7 @@ a:active {
 	position:absolute;
 	left:0;
 	width:3em;
+    z-index: 9999;
 }
 #menu-primary-items > .menu-item .sub-menu-item a {
 	display:block;
@@ -593,9 +591,9 @@ a:active {
     #menu-primary ul li ul {
         padding: 0;
         position: absolute;
-        top: 48px;
+        top: 3em;
         left: 0;
-        width: 150px;
+        min-width: 180px;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
@@ -618,6 +616,7 @@ a:active {
         display: block;
         opacity: 1;
         visibility: visible;
+        z-index: 9999;
     }
     .menu-items {
         display: block !important;
@@ -671,15 +670,24 @@ a:active {
     }
 }
 /* Menu: Secondary */
+
+#menu-secondary.nav {
+	position:relative;
+	display:block;
+}
 #menu-secondary {
     background: #fff;
     
 }
 #menu-secondary ul {
-    text-align: left;
-    display: block;
-    margin: 0;
+    background-color: rgba(255, 255, 255, 0.75);
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    position: relative;
     list-style: none;
+    margin: 0;
+    font-size: 16px;
 }
 #menu-secondary ul li {
     display: inline-block;
@@ -726,6 +734,7 @@ a:active {
     display: block;
     opacity: 1;
     visibility: visible;
+    z-index: 9999;
 }
 
 @media screen and (max-width: 80em) {
@@ -980,7 +989,6 @@ ul#widget-whimsy-social {
 
 #header {
 	position: relative;
-	z-index: 90;
 }
 
 #masthead {
@@ -992,6 +1000,8 @@ ul#widget-whimsy-social {
 	font-size:4em;
 	line-height: 1.4em;
 	margin-bottom: 0;
+	position: relative;
+	z-index: 3000;
 }
 
 .site-branding > hgroup > h1.site-title a{
@@ -1004,6 +1014,8 @@ ul#widget-whimsy-social {
 	font-weight: 100;
 	margin-bottom: 0;
 	font-style: italic;
+	position: relative;
+	z-index: 3000;
 }
 .site-branding, .custom-header {
 	margin-bottom: 1.4em;

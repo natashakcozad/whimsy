@@ -30,9 +30,9 @@
         'settings'    => 'use_whimsy_bg',
         'label'       => __( 'Use Whimsy+BG?', 'whimsy' ),
         'description' => __( '<em>Please note:</em> To use Whimsy+BG you please make sure no other backgrounds are set above.', 'whimsy' ),
-        'section'     => 'whimsy_bg',
+        'section'     => 'background_image',
         'default'     => false,
-        'priority'    => 30,
+        'priority'    => 10,
     ) );
     
     Whimsy_Kirki::add_field( 'whimsy_bg_customizer', array(
@@ -40,9 +40,9 @@
     	'settings'    => 'select_tiled_bg',
     	'label'       => __( 'Whimsy+BG', 'whimsy' ),
 		'description' => __( 'Choose a tiled background. <a href="http://whimsy.club/library/bg/" target="_blank">View all</a>.', 'whimsy' ),
-    	'section'     => 'whimsy_bg',
+    	'section'     => 'background_image',
     	'default'     => 'whimsy-bg-dots',
-    	'priority'    => 10,
+    	'priority'    => 11,
         'required'  => array(
             array(
             'setting'  => 'use_whimsy_bg',
@@ -64,38 +64,6 @@
             'whimsy-bg-sketchy-ribbons'             => __( 'Sketchy Ribbons', 'whimsy' ),
             'whimsy-bg-sketchy-vertical-ribbons'    => __( 'Sketchy Vertical Ribbons', 'whimsy' ),
         ),
-    ) );
-    
-    Whimsy_Kirki::add_field( 'whimsy_bg_customizer', array(
-        'type'        => 'color-alpha',
-        'settings'    => 'tiled_color_background',
-        'label'       => __( 'Background Color', 'whimsy' ),
-        'description' => __( 'The background images are semi-transparent, so they will automatically blend into the background color.', 'whimsy' ),
-        'section'     => 'whimsy_bg',
-        'default'     => '#efefef',
-        'priority'    => 11,
-        'required'  => array(
-            array(
-            'setting'  => 'use_whimsy_bg',
-            'operator' => '==',
-            'value'    => true
-            ),
-        ),
-        'output'      => array(
-            array(
-                'element'  => 'body',
-                'property' => 'background-color',
-            ),
-        ),
-		'transport'   => 'postMessage',
-        'js_vars'     => array(
-            array(
-                'element'  => 'body',
-                'function' => 'css',
-                'property' => 'background-color',
-            ),
-        ),
-        
     ) );
     
 }

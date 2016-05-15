@@ -34,6 +34,13 @@ if ( class_exists( 'Whimsy_Kirki' ) ) {
         'section'     => 'layout',
         'default'     => '#ffffff',
         'priority'    => 11,
+        'required'  => array(
+            array(
+            'setting'  => 'box_layout',
+            'operator' => '==',
+            'value'    => true
+            ),
+        ),
         'output'      => array(
             array(
                 'element'  => '.box-layout',
@@ -149,9 +156,9 @@ if ( class_exists( 'Whimsy_Kirki' ) ) {
         ),
         'required'    => array(
             array(
-                'setting'  => 'box_shadow',
+                'setting'  => 'box_layout',
                 'operator' => '==',
-                'value'    => 1,
+                'value'    => true
             ),
         )
     ) );
