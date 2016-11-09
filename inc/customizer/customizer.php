@@ -432,12 +432,12 @@ Whimsy_Kirki::add_field( 'whimsy_customizer', array(
 ) );
 
 Whimsy_Kirki::add_field( 'whimsy_customizer', array(
-    'type'        => 'number',
+    'type'        => 'dimension',
     'settings'    => 'header_as_bg_height',
     'label'       => __( 'Header Height', 'whimsy' ),
     'help'        => __( 'Use the height of your header image in pixels.', 'whimsy' ),
     'section'     => 'header_image',
-    'default'     => '450',
+    'default'     => '250px',
     'priority'    => 10,
     'required'    => array(
         array(
@@ -448,7 +448,7 @@ Whimsy_Kirki::add_field( 'whimsy_customizer', array(
     ),
     'output'      => array(
         array(
-            'element'  => '.header-image',
+            'element'  => '.header-bg-image',
             'property' => 'height',
             'units'    => 'px',
         ),
@@ -456,7 +456,7 @@ Whimsy_Kirki::add_field( 'whimsy_customizer', array(
     'transport'    => 'postMessage',
     'js_vars'      => array(
         array(
-            'element'  => '.header-image',
+            'element'  => '.header-bg-image',
             'property' => 'height',
             'units'    => 'px',
             'function' => 'css',
@@ -487,14 +487,14 @@ Whimsy_Kirki::add_field( 'whimsy_customizer', array(
     ),
     'output'      => array(
         array(
-            'element'  => '.header-image',
+            'element'  => '.header-bg-image',
             'property' => 'background-size'
         ),
     ),
     'transport'    => 'postMessage',
     'js_vars'      => array(
         array(
-            'element'  => '.header-image',
+            'element'  => '.header-bg-image',
             'property' => 'background-size',
             'function' => 'css',
         ),
@@ -550,6 +550,16 @@ Whimsy_Kirki::add_field( 'whimsy_customizer', array(
 ) );
 
 /* Advanced */
+
+Whimsy_Kirki::add_field( 'whimsy_customizer', array(
+    'type'        => 'toggle',
+    'settings'    => 'enable_breadcrumbs',
+    'label'       => __( 'Enable breadcrumbs?', 'whimsy' ),
+    'section'     => 'advanced',
+    'default'     => false,
+    'priority'    => 10,
+) );
+
 //
 //Whimsy_Kirki::add_field( 'whimsy_customizer', array(
 //	'type'        => 'code',
